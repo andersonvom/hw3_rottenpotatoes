@@ -23,7 +23,13 @@ Background: movies have been added to database
 
 Scenario: sort movies alphabetically
   # your steps here
+  When I follow "title_header"
+  Then I should see "Aladdin" before "Amelie"
+  And I should see "Chicken Run" before "The Incredibles"
 
 Scenario: sort movies in increasing order of release date
   # your steps here
+  When I follow "release_date_header"
+  Then I should see "Aladdin" before "Amelie"
+  And I should see "Chicken Run" before "The Incredibles"
 
